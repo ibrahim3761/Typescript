@@ -16,7 +16,7 @@ The `any` type disables type checking entirely. Once we use `any`, TypeScript st
 let value: any = "Hello";
 
 value = 42;        // No error
-value.toUpperCase(); // Runtime error (number has no toUpperCase)
+value.toUpperCase(); // Runtime error (as it is a number, it can't be tranfered to upper case)
 ```
 
 ### Problem:
@@ -38,10 +38,11 @@ let value: unknown = "Hello";
 
 value = 42;
 
-// value.toUpperCase(); Error
+value.toUpperCase(); //Error (as it does not know it's type )
 
+//To avoid
 if (typeof value === "string") {
-  console.log(value.toUpperCase()); // Safer
+  console.log(value.toUpperCase());
 }
 ```
 
