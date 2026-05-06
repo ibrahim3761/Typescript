@@ -1,4 +1,4 @@
-# Why `any` is a Type Safety Hole and `unknown` is the Safer Alternative
+# Why is any labeled a "type safety hole," and why is unknown the safer choice for handling unpredictable data? Explain the concept of type narrowing.
 
 ## Introduction
 
@@ -6,7 +6,7 @@ TypeScript’s primary goal is to bring type safety to JavaScript. However, the 
 
 ---
 
-## What is `any` and Why is it Dangerous?
+## What is `any`?
 
 The `any` type disables type checking entirely. Once we use `any`, TypeScript stops helping us.
 
@@ -48,7 +48,7 @@ if (typeof value === "string") {
 
 ---
 
-## Type Narrowing Explained
+## What is `Type narrowing`
 
 Type narrowing means reducing a variable’s type to a more specific one using checks.
 
