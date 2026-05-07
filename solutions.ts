@@ -11,7 +11,6 @@ const filterEvenNumbers = (arr: number[]): number[] => {
   return res;
 };
 
-console.log(filterEvenNumbers([1, 2, 3, 4, 5, 6]));
 
 //Problem-2
 
@@ -19,7 +18,6 @@ const reverseString = (str: string): string => {
   return str.split("").reverse().join("");
 };
 
-console.log(reverseString("typescript"));
 
 //Problem-3
 
@@ -33,7 +31,6 @@ const checkType = (val: StringOrNumber): string => {
   }
 };
 
-console.log(checkType("Hello"));
 
 //Problem-4
 
@@ -41,8 +38,6 @@ const getProperty = <X>(obj: X, key: keyof X) => {
   return obj[key];
 };
 
-const user = { id: 1, name: "John Doe", age: 21 };
-console.log(getProperty(user, "age"));
 
 //Problem-5
 
@@ -63,12 +58,6 @@ const toggleReadStatus = (mybook: Book): BookStat => {
   };
 };
 
-const myBook = {
-  title: "TypeScript Guide",
-  author: "Jane Doe",
-  publishedYear: 2024,
-};
-console.log(toggleReadStatus(myBook));
 
 //Problem-6
 class Person {
@@ -93,7 +82,16 @@ class Student extends Person {
   }
 }
 
-const student = new Student("Alice", 20, "A");
-console.log(student.getDetails());
 
 //Problem-7 
+
+const getIntersection = (arr1:number[], arr2:number[]):number[]=>{
+  const res:number[]=[]
+  for(let i=0;i<arr1.length; i++){
+    if(arr2.includes(arr1[i])){
+      res.push(arr1[i])
+    }
+  }
+  return res;
+}
+
