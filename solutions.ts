@@ -11,6 +11,7 @@ const filterEvenNumbers = (arr: number[]): number[] => {
   return res;
 };
 
+filterEvenNumbers([1, 2, 3, 4, 5, 6]);
 
 //Problem-2
 
@@ -18,6 +19,7 @@ const reverseString = (str: string): string => {
   return str.split("").reverse().join("");
 };
 
+reverseString("typescript");
 
 //Problem-3
 
@@ -31,6 +33,7 @@ const checkType = (val: StringOrNumber): string => {
   }
 };
 
+checkType("Hello");
 
 //Problem-4
 
@@ -38,6 +41,8 @@ const getProperty = <X>(obj: X, key: keyof X) => {
   return obj[key];
 };
 
+const user = { id: 1, name: "John Doe", age: 21 };
+getProperty(user, "name");
 
 //Problem-5
 
@@ -58,6 +63,12 @@ const toggleReadStatus = (mybook: Book): BookStat => {
   };
 };
 
+const myBook = {
+  title: "TypeScript Guide",
+  author: "Jane Doe",
+  publishedYear: 2024,
+};
+toggleReadStatus(myBook);
 
 //Problem-6
 class Person {
@@ -82,6 +93,8 @@ class Student extends Person {
   }
 }
 
+const student = new Student("Alice", 20, "A");
+student.getDetails();
 
 //Problem-7 
 
@@ -95,3 +108,4 @@ const getIntersection = (arr1:number[], arr2:number[]):number[]=>{
   return res;
 }
 
+getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]);
